@@ -2,10 +2,11 @@
 //npm run server
 //require c'est comme un import 
 
-require("dotenv").config({ path: './env' });
 const express = require("express");
 const productRoutes = require("./routes/productRoutes");
 const connectDB = require("./config/db");
+const path = require("path");
+require("dotenv").config({ path: './env' });
 
 connectDB();
 
