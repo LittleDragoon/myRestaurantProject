@@ -6,7 +6,7 @@ const express = require("express");
 const productRoutes = require("./routes/productRoutes");
 const connectDB = require("./config/db");
 const path = require("path");
-require("dotenv").config({ path: './env' });
+require("dotenv").config();
 
 connectDB();
 
@@ -26,18 +26,18 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 
-console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "production") {
+
     app.use(express.static(path.join(__dirname, "client/build")));
 
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    app.get("/", (req, res) => {
+        res.sendFile(path.join(__dirname, "./client/build/index.html"));
     });
 }
 else {
     app.get("/", (req, res) => {
-        res.send(process.env.NODE_ENV);
+
 
         res.send("Api running");
     })
