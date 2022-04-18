@@ -1,0 +1,31 @@
+{
+  "name": "myrestaurantproject",
+  "proxy": "http://127.0.0.1:5000",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "data:import": "node seederScript.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleDragoon/myRestaurantProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LittleDragoon/myRestaurantProject/issues"
+  },
+  "homepage": "https://github.com/LittleDragoon/myRestaurantProject#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,71 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0rem 0.2rem;
+  position: fixed;
+  height: 80px;
+}
+
+.app__image {
+  display: flex;
+  flex: 1;
+  max-height: 100%;
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*Enlever les bullet points*/
+  list-style: none;
+}
+
+.app__navbar-links-li {
+  margin: 0 2rem;
+  /*Clickable*/
+  cursor: pointer;
+}
+
+.app__navbar-links-li :hover {
+  color: grey;
+}
+
+.ecriture {
+  font-family: "Copperplate";
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.app__navbar-logo {
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app__navbar-panier {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0rem 1.3rem;
+}
+
+.app__navbar-panier-li {
+  margin: 0 3rem;
+  /*Clickable*/
+  cursor: pointer;
+}
+
+.app__navbar-panier-li :hover {
+  color: grey;
+}

@@ -1,0 +1,22 @@
+ToDoList :
+
+- Backend avec MongoDB
+- si besoin : tuto Node.js
+https://nodejs.dev/learn/how-to-exit-from-a-nodejs-program
+
+- Async function pour récupérer les data
+
+- Front end :
+--> Page du Home : Ajouter panier qui devient un input avec des + et des - 
+--> Page Panier : Onglet Panier CSS à bien faire
+--> Page Panier : Ordre des produits à classifier entre Entrées Plats Desserts
+
+--> add a symlink to it from project's node_modules
+
+
+(Optionnel :
+Si ci-dessus fini :
+
+--> lien vers admin
+--> page admin
+--> système d'authentification)

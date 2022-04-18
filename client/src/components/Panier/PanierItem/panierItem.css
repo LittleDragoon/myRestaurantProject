@@ -1,0 +1,141 @@
+/*.sous__bloc1 {
+    flex-direction: row;
+    padding: 5rem;
+    border-radius: 10%;
+}
+
+.sous__bloc1bis {
+    width: 13rem;
+    height: 28rem;
+}
+
+.bloc__image {
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.text__image {
+    font-family: "Copperplate";
+    color: rgb(12, 12, 12);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+}
+
+.button {
+    margin: 30px;
+    font-size: 18px;
+    height: 65px;
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
+    background: red;
+    cursor: pointer;
+}
+
+.text__form_input {
+    font-family: "Copperplate";
+    height: 30px;
+    width: 110px;
+    font-size: 1rem;
+    text-align: center;
+}*/
+
+
+.cartItem {
+    margin-bottom: 2rem;
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    height: 15rem;
+    width: 40rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0.25rem;
+
+}
+
+
+.cartItem__image {
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px #fdc500;
+}
+
+.cartItem__details {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--secondary-color);
+    flex: 0.8;
+    align-items: center;
+}
+
+
+.details__title {
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+
+.details__desc {
+    font-size: 1.3rem;
+}
+
+.details__price {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.cartItem__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem;
+
+}
+
+.cartItem__qty {
+    display: flex;
+    align-items: center;
+}
+
+.cartItem__qty input {
+    padding: 10px;
+    margin-left: 0.4rem;
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    outline: none;
+    height: 25px;
+
+}
+
+.actions__deleteItemBtn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease-in-out 0.7s;
+    outline: none;
+}
+
+.actions__deleteItemBtn:hover {
+    transform: scale(1.2) rotate(360deg);
+    background-color: rgb(209, 15, 15);
+}
+
+.actions__deleteItemImage {
+    width: 20px;
+    height: 20px;
+}
