@@ -35,9 +35,7 @@ app.use(bodyParser.json());
 // Commentaires : app.use(Router)
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.json({ message: "API running..." });
-});
+
 
 app.use("/api/products", productRoutes);
 
