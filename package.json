@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "client": "npm start --prefix client",
     "data:import": "node seederScript.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/LittleDragoon/myRestaurantProject#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "concurrently": "^7.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
