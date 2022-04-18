@@ -37,6 +37,8 @@ if (process.env.NODE_ENV === "production") {
 }
 else {
     app.get("/", (req, res) => {
+        console.log(process.env.NODE_ENV);
+
         res.send("Api running");
     })
 }
