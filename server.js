@@ -34,7 +34,14 @@ app.use(bodyParser.json());
 // Commentaires : app.use(Router)
 app.use(express.json());
 
+<<<<<<< Updated upstream
 
+=======
+/*app.get("/", (req, res) => {
+
+    res.send("Hi to the Api server");
+})*/
+>>>>>>> Stashed changes
 
 app.use("/api/products", productRoutes);
 
