@@ -30,6 +30,11 @@ else {
     })
 }*/
 
+app.get("/", (req, res) => {
+
+    res.send("Api is running");
+})
+
 app.use(bodyParser.json());
 // Commentaires : app.use(Router)
 app.use(express.json());
