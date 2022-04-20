@@ -11,7 +11,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "data:import": "node seederScript.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
