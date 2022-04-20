@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "build": "cd client && npm run build",
     "client": "npm start --prefix client",
     "data:import": "node seederScript.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
