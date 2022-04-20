@@ -15,7 +15,7 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-if (process.env.NODE_ENV === "production") {
+/*if (process.env.NODE_ENV === "production") {
 
     app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -28,7 +28,12 @@ else {
 
         res.send("Api is running");
     })
-}
+}*/
+
+app.get("/", (req, res) => {
+
+    res.send("Api is running");
+})
 
 app.use(bodyParser.json());
 // Commentaires : app.use(Router)

@@ -10,8 +10,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "data:import": "node seederScript.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node seederScript.js"
   },
   "repository": {
     "type": "git",
