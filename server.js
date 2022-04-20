@@ -7,7 +7,7 @@ const productRoutes = require("./routes/productRoutes");
 const connectDB = require("./config/db");
 const path = require("path");
 require("dotenv").config();
-
+const cors = require("cors");
 connectDB();
 
 const app = express();
@@ -29,6 +29,8 @@ else {
         res.send("Api is running");
     })
 }*/
+
+app.use(cors());
 
 app.get("/", (req, res) => {
 
