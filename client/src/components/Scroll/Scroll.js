@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import './Scroll.css';
 
-const ScrollButton = () => {
+const ScrollButton = ({ boolean, height }) => {
 
+  const bool = boolean === "true" ? true : false;
   const [visible, setVisible] = useState(false)
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 1950) {
+    if (scrolled > Number(height)) {
       setVisible(true)
     }
-    else if (scrolled <= 1950) {
-      setVisible(false)
+    else if (scrolled <= Number(height)) {
+      setVisible(bool);
     }
   };
 

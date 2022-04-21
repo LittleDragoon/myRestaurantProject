@@ -6,13 +6,14 @@ import "./panier.css"
 
 import { removeFromCart } from "../../redux/Commander/cartActions";
 
-
+import Navbarbis from "../Navbar/Navbarbis";
+import { NavLink } from 'react-router-dom';
+import ScrollButton from "../Scroll/Scroll";
 
 
 const Panier = () => {
 
     const dispatch = useDispatch();
-
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
 
@@ -38,40 +39,49 @@ const Panier = () => {
 
 
     return (
-        <div className="wrapper">
-            <div className="cart">
-                <div className="cart__items">
+        <div>
+            <Navbarbis />
+            <div className="wrapper">
+                <div className="cart">
+                    <div className="cart__items">
 
-                    {cartItems.map((prod) => (
-                        < PanierItem
-                            key={prod._id}
-                            data={prod}
-                            removeFromCart={() => { dispatch(removeFromCart(prod._id)) }}
-                        />
-                    ))}
-                </div>
-                <div className="cart__summary">
-                    <h4 className="summary__title"> Votre commande</h4>
-                    {cartItems.map((prod) => (
-                        <div className='test'>
-                            <span>{prod.title} x {prod.qty} :</span>
-                            <span> {prod.qty * prod.price} € </span>
-                        </div>
-
-                    ))}
-
-                    <div className='barre'>_________________________________________________</div>
-
-                    <div className="summary__price">
-
-                        <span>TOTAL: ({totalItems} produits)</span>
-                        <span>{totalPrice} €</span>
+                        {cartItems.map((prod) => (
+                            < PanierItem
+                                key={prod._id}
+                                data={prod}
+                                removeFromCart={() => { dispatch(removeFromCart(prod._id)) }}
+                            />
+                        ))}
                     </div>
-                    <button className="summary__checkoutBtn">
-                        Valider la commande
-                    </button>
+                    <div className="cart__summary">
+                        <h4 className="summary__title"> Votre commande</h4>
+                        {cartItems.map((prod) => (
+                            <div className='test'>
+                                <span>{prod.title} x {prod.qty} :</span>
+                                <span> {prod.qty * prod.price} € </span>
+                            </div>
+
+                        ))}
+
+                        <div className='barre'>_________________________________________________</div>
+
+                        <div className="summary__price">
+
+                            <span>TOTAL: ({totalItems} produits)</span>
+                            <span>{totalPrice} €</span>
+                        </div>
+                        <button className="summary__checkoutBtn">
+                            Valider la commande
+                        </button>
+                        <NavLink to="/" >
+                            <button className="summary__gobackBtn">
+                                Retourner à l'accueil
+                            </button>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
+            <ScrollButton boolean="false" height="120" />
         </div>
     );
 };

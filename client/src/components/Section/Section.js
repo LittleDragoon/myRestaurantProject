@@ -7,6 +7,7 @@ import Product from "../Products/Products";
 //Actions
 import { getProducts as listProducts } from "../../redux/Commander/productActions"
 import { addToCart } from '../../redux/Commander/cartActions'
+import "./Section.css"
 
 
 const Section = ({ type, titre }) => {
@@ -25,10 +26,11 @@ const Section = ({ type, titre }) => {
 
     return (
         <div>
+
             {loading ? (
-                <h2> Loading... </h2 >
+                <h2 className='Titre'> Loading... </h2 >
             ) : error ? (
-                <h2>{error}</h2>
+                <h2 className='Titre'>{error}</h2>
             ) : (
                 <div id={type} className='ProductsContainer'>
                     <div className='ProductsHeading'>

@@ -1,0 +1,9 @@
+.Titre {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+}
