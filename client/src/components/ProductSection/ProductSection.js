@@ -3,11 +3,11 @@ import React from 'react'
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Product from "../Products/Products";
+import ProductItem from "./ProductItem/ProductItem";
 //Actions
 import { getProducts as listProducts } from "../../redux/Commander/productActions"
 import { addToCart } from '../../redux/Commander/cartActions'
-import "./Section.css"
+import "./ProductSection.css"
 
 
 const Section = ({ type, titre }) => {
@@ -21,14 +21,13 @@ const Section = ({ type, titre }) => {
         dispatch(listProducts());
     }, [dispatch]);
 
-    console.log(titre);
 
 
     return (
         <div>
 
             {loading ? (
-                <h2 className='Titre'> Loading... </h2 >
+                <h2 className='Titre'> Currently loading... </h2 >
             ) : error ? (
                 <h2 className='Titre'>{error}</h2>
             ) : (
@@ -40,8 +39,9 @@ const Section = ({ type, titre }) => {
 
                         {products.map((product) => (
                             product.type === type ?
-                                <Product
+                                <ProductItem
                                     key={product._id}
+                                    ide={product._id}
                                     title={product.title}
                                     description={product.description}
                                     price={product.price}

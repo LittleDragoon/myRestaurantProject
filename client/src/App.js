@@ -8,11 +8,12 @@ import './App.css'
 
 const App = () => (
     <div >
-        <Router>
+        <Router forceRefresh={true}>
 
-            <Routes>
+            <Routes >
                 <Route path="/" element={<Accueil />} />
                 <Route path="/panier" element={<Panier />} />
+
 
             </Routes>
 

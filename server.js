@@ -4,45 +4,38 @@
 
 const express = require("express");
 const productRoutes = require("./routes/productRoutes");
+const PostRoutes = require("./routes/PostRoutes");
+
 const connectDB = require("./config/db");
-const path = require("path");
 require("dotenv").config();
 
 connectDB();
-
 const app = express();
 
+var cors = require('cors')
 
+app.use(cors())
 const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-/*if (process.env.NODE_ENV === "production") {
 
-    app.use(express.static(path.join(__dirname, "client/build")));
-
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    });
-}
-else {
-    app.get("/", (req, res) => {
-
-        res.send("Api is running");
-    })
-}*/
 
 app.get("/", (req, res) => {
 
     res.send("Api is running");
 })
 
-app.use(bodyParser.json());
 // Commentaires : app.use(Router)
-app.use(express.json());
 
 
 
 app.use("/api/products", productRoutes);
-
+app.use("/order", PostRoutes);
 
 
 

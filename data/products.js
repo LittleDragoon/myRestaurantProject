@@ -14,8 +14,6 @@ const dessert3 = require('../../src/assets/dessert3.png');*/
 const products = [
     [
         {
-
-
             title: "Salade César",
             description: "Hmm, c'est très bon ! ",
             price: 10,

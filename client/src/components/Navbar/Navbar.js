@@ -50,7 +50,7 @@ const Navbar = () => {
 
             <div className="app__navbar-panier">
                 <li className="app__navbar-panier-li">
-                    <NavLink className="ecriture" to="/panier"  >
+                    <NavLink onClick={() => window.location.assign("/panier").reload()} className="ecriture" to="/panier"  >
                         <Badge badgeContent={totalItems} color="primary">
                             <FaShoppingCart />
                         </Badge>
