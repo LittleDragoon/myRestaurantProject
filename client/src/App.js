@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Accueil, Panier } from './components'
+import { Accueil, Panier } from './components'
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -8,12 +8,12 @@ import './App.css'
 
 const App = () => (
     <div >
-        <Router>
-            <Navbar />
+        <Router forceRefresh={true}>
 
-            <Routes>
+            <Routes >
                 <Route path="/" element={<Accueil />} />
                 <Route path="/panier" element={<Panier />} />
+
 
             </Routes>
 

@@ -6,7 +6,6 @@ const CART_INITIAL_STATE = {
 export const cartReducer = (state = CART_INITIAL_STATE, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_CART:
-
             const Newitem = action.payload;
             //Check if the item is in Panier already
             const inPanier = state.cartItems.find(item => item._id === action.payload._id ? true : false)

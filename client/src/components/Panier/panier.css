@@ -96,7 +96,9 @@
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 }
+
 
 .summary__checkoutBtn:focus {
     outline: none;
@@ -104,5 +106,28 @@
 }
 
 .summary__checkoutBtn:hover {
+    opacity: 0.75;
+}
+
+.summary__gobackBtn {
+    padding: 10px 17px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    background: var(--red-color);
+    color: var(--light-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+
+.summary__gobackBtn:focus {
+    outline: none;
+    border: 1px solid var(--red-color);
+}
+
+.summary__gobackBtn:hover {
     opacity: 0.75;
 }

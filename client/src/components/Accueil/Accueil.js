@@ -1,16 +1,17 @@
 import React from 'react'
-import Section from '../Section/Section';
+import ProductSection from '../ProductSection/ProductSection';
 import ScrollButton from '../Scroll/Scroll';
+import Navbar from "../Navbar/Navbar";
 
 const Accueil = () => {
     return (
         <div>
-            <Section type="entree" titre="Entrée" />
-            <Section type="plat" titre="Plat" />
-            <Section type="dessert" titre="Dessert" />
-            <ScrollButton />
+            <Navbar />
+            <ProductSection type="entree" titre="Entrée" />
+            <ProductSection type="plat" titre="Plat" />
+            <ProductSection type="dessert" titre="Dessert" />
+            <ScrollButton boolean="false" height="1950" />
         </div>
-
     )
 }
 

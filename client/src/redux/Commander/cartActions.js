@@ -13,13 +13,13 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
     dispatch({
         type: actionTypes.ADD_TO_CART,
         payload: {
-            title: data.title,
-            description: data.description,
-            price: data.price,
-            image: data.image,
-            _id: data._id,
+            "title": data.title,
+            "description": data.description,
+            "price": data.price,
+            "image": data.image,
+            "_id": data._id,
             qty,
-            type: data.type
+            "type": data.type
         },
     });
 
@@ -48,5 +48,6 @@ export const adjustQty = (id, value) => (dispatch, getState) => {
 
     localStorage.setItem("cart", JSON.stringify(getState().cart.cartItems));
 };
+
 
 

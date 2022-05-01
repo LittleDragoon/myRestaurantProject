@@ -30,27 +30,27 @@ const Navbar = () => {
     return (
         <nav className='app__navbar'>
 
-            <div className="app__navbar-logo">
-
-                <img className="app__image" src={images.thelogo} alt="app logo" />
-            </div>
+            <NavLink to="/" >
+                <div className="app__navbar-logo">
+                    <img className="app__image" src={images.thelogo} alt="app logo" />
+                </div>
+            </NavLink>
 
             <ul className="app__navbar-links">
                 <li className="app__navbar-links-li">
                     <NavLink className="ecriture" to="/" >
-                        Home
+                        Accueil
                     </NavLink>
                 </li>
 
                 <li className="app__navbar-links-li" > <a href="#entree" className="ecriture">Entrée</a></li>
-
                 <li className="app__navbar-links-li"><a href="#plat" className="ecriture" >Plat</a></li>
                 <li className="app__navbar-links-li"> <a href="#dessert" className="ecriture">Dessert</a></li>
             </ul>
 
             <div className="app__navbar-panier">
                 <li className="app__navbar-panier-li">
-                    <NavLink className="ecriture" to="/panier"  >
+                    <NavLink onClick={() => window.location.assign("/panier").reload()} className="ecriture" to="/panier"  >
                         <Badge badgeContent={totalItems} color="primary">
                             <FaShoppingCart />
                         </Badge>
