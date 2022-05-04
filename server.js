@@ -12,7 +12,6 @@ const cors = require("cors");
 connectDB();
 const app = express();
 
-var cors = require('cors')
 
 app.use(cors())
 const bodyParser = require('body-parser');
@@ -25,8 +24,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-
-app.use(cors());
 
 app.get("/", (req, res) => {
 
