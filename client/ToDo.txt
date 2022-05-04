@@ -1,6 +1,6 @@
 
 - Front end :
---> Page du Home : Ajouter panier qui devient un input avec des + et des - 
+
 --> Page Panier : Ordre des produits à classifier entre Entrées Plats Desserts
 
 

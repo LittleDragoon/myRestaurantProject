@@ -35,12 +35,12 @@ const PanierItem = ({ data, removeFromCart }) => {
                 <div className="cartItem__qty">
                     <label htmlFor="qty">Qty</label>
                     <input
+                        className='ecritures'
                         min="1"
                         type="number"
                         id="qty"
                         name="qty"
                         value={input}
-
                         onChange={(e) => { onChangeHandler(e) }}
                     />
                 </div>

@@ -61,10 +61,22 @@
 
 }
 
+<<<<<<< Updated upstream
+=======
+.test1 {
+    flex: 0.9;
+}
+>>>>>>> Stashed changes
 
 .cartItem__image {
+
     height: 100%;
+<<<<<<< Updated upstream
     object-fit: contain;
+=======
+    min-width: 100%;
+    max-width: 100%;
+>>>>>>> Stashed changes
     border-radius: 10px;
     box-shadow: 0px 0px 16px #fdc500;
 }
@@ -79,6 +91,11 @@
     align-items: center;
 }
 
+.ecritures {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
 
 .details__title {
     font-size: 1.6rem;
