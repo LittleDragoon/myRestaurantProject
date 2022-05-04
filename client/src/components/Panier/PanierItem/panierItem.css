@@ -42,16 +42,19 @@
 .details__title {
     font-size: 1.6rem;
     font-weight: bold;
+    text-align: center;
 
 }
 
 .details__desc {
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .details__price {
     font-size: 1.6rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .cartItem__actions {

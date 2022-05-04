@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Orders = new mongoose.Schema({
-    cartItem: [{
+    order: [{
         title: {
             type: String,
             required: true

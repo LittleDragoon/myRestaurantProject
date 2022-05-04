@@ -20,11 +20,13 @@ const PanierItem = ({ data, removeFromCart }) => {
 
     return (
         <div className="cartItem">
-            <img
-                className="cartItem__image"
-                src={data.image}
-                alt={data.title}
-            />
+            <div className="test1">
+                <img
+                    className="cartItem__image"
+                    src={data.image}
+                    alt={data.title}
+                />
+            </div>
             <div className="cartItem__details">
                 <div className="details__title">{data.title}</div>
 
