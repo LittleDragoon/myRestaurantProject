@@ -9,6 +9,13 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
     const [totalItems, setTotalItems] = useState(0);
@@ -30,18 +37,18 @@ const Navbar = () => {
     return (
         <nav className='app__navbar'>
 
-            <NavLink to="/" >
-                <div className="app__navbar-logo">
+            <NavLink to="/" onClick={scrollToTop} >
+                <div className="app__navbar-logo" >
                     <img className="app__image" src={images.thelogo} alt="app logo" />
                 </div>
             </NavLink>
 
             <ul className="app__navbar-links">
-                <li className="app__navbar-links-li">
-                    <NavLink className="ecriture" to="/" >
+                {/*<li className="app__navbar-links-li">
+                    <NavLink className="ecriture" to="/" onClick={() => window.location.reload()} >
                         Accueil
                     </NavLink>
-                </li>
+                </li>*/}
 
                 <li className="app__navbar-links-li" > <a href="#entree" className="ecriture">Entrée</a></li>
                 <li className="app__navbar-links-li"><a href="#plat" className="ecriture" >Plat</a></li>

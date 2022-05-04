@@ -8,7 +8,7 @@ const PostRoutes = require("./routes/PostRoutes");
 
 const connectDB = require("./config/db");
 require("dotenv").config();
-
+const cors = require("cors");
 connectDB();
 const app = express();
 
@@ -25,6 +25,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
+
+app.use(cors());
 
 app.get("/", (req, res) => {
 

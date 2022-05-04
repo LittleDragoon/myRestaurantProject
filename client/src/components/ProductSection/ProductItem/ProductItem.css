@@ -83,9 +83,15 @@
   color: #fff;
   transition: 0.2 ease-out;
 }
-
 .ProductButton:hover {
   background: #ffc500;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  color: #000;
+}
+
+.ProductButton:active {
+  background: #131312;
   transition: 0.2s ease-out;
   cursor: pointer;
   color: #000;
