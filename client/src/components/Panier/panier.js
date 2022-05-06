@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 import ScrollButton from "../Scroll/Scroll";
 import OrderDetails from '../OrderDetails/OrderDetails';
 import { createOrder } from "../../redux/Commander/orderActions";
-import axios from "axios";
+
 
 const Panier = () => {
 

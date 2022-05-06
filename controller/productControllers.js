@@ -1,5 +1,6 @@
 const Product = require("../models/Product");
 const Orders = require("../models/Orders");
+const mongoose = require('mongoose');
 
 const getProducts = async (req, res) => {
     try {
@@ -47,9 +48,34 @@ const getOrder = async (req, res) => {
     }
 };
 
+const getOrderId = async (req, res) => {
+    try {
+        const orderID = await Orders.findById(req.params.id);
+
+        res.json(orderID);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server Error" });
+    }
+};
+
+const deleteOrder = async (req,res) => {
+        const id = req.params.id;
+        
+        if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No post with that id');
+    
+        await Orders.findByIdAndRemove(id);
+    
+        res.json({ message: 'Post deleted successfully' });
+    
+
+};
+
 module.exports = {
     getProducts,
     getProductById,
     createOrder,
-    getOrder
+    getOrderId,
+    getOrder,
+    deleteOrder,
 };
