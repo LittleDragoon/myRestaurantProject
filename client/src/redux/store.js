@@ -6,14 +6,14 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { cartReducer } from "./Commander/cartReducers";
 import { orderReducer } from "./Commander/orderReducers";
 
-import {
-    getProductsReducer,
-} from "./Commander/productReducers";
+import { getProductsReducer} from "./Commander/productReducers";
+
 
 const reducer = combineReducers({
     cart: cartReducer,
     getProducts: getProductsReducer,
-    postOrder: orderReducer
+    order: orderReducer,
+    
 });
 
 const middleware = [thunk];

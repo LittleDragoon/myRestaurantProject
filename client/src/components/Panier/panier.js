@@ -69,7 +69,7 @@ const Panier = () => {
                     <div className="cart__summary">
                         <h4 className="summary__title"> Votre commande</h4>
                         {cartItems.map((prod) => (
-                            <div className='test'>
+                            <div className='test' key={prod._id}>
                                 <span>{prod.title} x {prod.qty} :</span>
                                 <span> {prod.qty * prod.price} € </span>
                             </div>

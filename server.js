@@ -8,7 +8,9 @@ const orderRoutes = require("./routes/orderRoutes");
 
 const connectDB = require("./config/db");
 require("dotenv").config();
-const cors = require("cors");
+
+var cors = require("cors");
+
 connectDB();
 const app = express();
 

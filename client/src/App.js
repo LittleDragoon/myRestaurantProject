@@ -1,5 +1,6 @@
 import React from 'react'
-import { Accueil, Panier } from './components'
+import { Panier } from './components'
+import {HomeScreen, AdminScreen} from "./Screens"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -11,8 +12,10 @@ const App = () => (
         <Router forceRefresh={true}>
 
             <Routes >
-                <Route path="/" element={<Accueil />} />
+                <Route path="/" element={<HomeScreen />} />
                 <Route path="/panier" element={<Panier />} />
+                <Route path="/admin" element={<AdminScreen/>} />
+
 
 
             </Routes>
