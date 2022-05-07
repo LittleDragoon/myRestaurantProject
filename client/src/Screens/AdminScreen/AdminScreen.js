@@ -35,40 +35,39 @@ const AdminScreen = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="fond">
       {loading ? (
         <h2 className="Titre"> Currently loading... </h2>
       ) : error ? (
         <h2 className="Titre">{error}</h2>
       ) : (
         <div className="wrapper">
-          {orders.map((item) =>
-            item.order.map((prod) => (
-              <div className="cart">
-                <div className="cart__summary">
-                  <h4 className="summary__title">Commandes</h4>
 
+          <div className="cart">
+            {orders.map((item) =>
+              <div className="cart__summary">
+                <h4 className="summary__title">Commandes</h4>
+
+                {item.order.map((prod) => (
                   <div className="test" key={item._id}>
-                    <span>
-                      {prod.title} x {prod.qty} :
-                    </span>
+                    <span>{prod.title} x {prod.qty} :</span>
                     <span> {prod.qty * prod.price} € </span>
-                  </div>
+                  </div>))}
 
-                  <div className="barre">
-                    __________________________________________
-                  </div>
-                  <div className="summary__price">
-                    <span>TOTAL: ({totalItems} produits)</span>
-                    <span> {totalPrice} €</span>
-                  </div>
-                  <button className="summary__checkoutBtn" onClick={() => {}}>
-                    Supprimer la commande
-                  </button>
+
+                <div className="barre">
+                  __________________________________________
                 </div>
+                <div className="summary__price">
+                  <span>TOTAL: {item.totalqty}  produits</span>
+                  <span>{item.totalprice}€</span>
+                </div>
+                <button className="summary__checkoutBtn" onClick={() => { }}>
+                  Supprimer la commande
+                </button>
               </div>
-            ))
-          )}
+            )}
+          </div>
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const createOrder = (order) => (dispatch) => {
 
-    axios.post("https://localhost:5000/order", order).then(response => {
+    axios.post("https://my-restaurant-proj.herokuapp.com/order", order).then(response => {
 
         console.log(order);
         console.log(response);
