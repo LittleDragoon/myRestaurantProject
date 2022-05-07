@@ -7,6 +7,7 @@ const connectDB = require("./config/db");
 
 //Collection
 const Product = require("./models/Product");
+const Order = require("./models/Orders");
 
 
 connectDB();
@@ -19,6 +20,7 @@ const importData = async () => {
         await Product.insertMany(productData[1]);
         await Product.insertMany(productData[2]);
 
+        await Order.deleteMany({});
 
         console.log("Data Import Success");
 

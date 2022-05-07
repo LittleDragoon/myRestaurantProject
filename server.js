@@ -4,11 +4,13 @@
 
 const express = require("express");
 const productRoutes = require("./routes/productRoutes");
-const PostRoutes = require("./routes/PostRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 const connectDB = require("./config/db");
 require("dotenv").config();
-const cors = require("cors");
+
+var cors = require("cors");
+
 connectDB();
 const app = express();
 
@@ -27,7 +29,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
 
-    res.send("Api is running");
+    res.send("You can check the link /api/products   or  /order");
 })
 
 // Commentaires : app.use(Router)
@@ -35,7 +37,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/products", productRoutes);
-app.use("/order", PostRoutes);
+app.use("/", orderRoutes);
 
 
 

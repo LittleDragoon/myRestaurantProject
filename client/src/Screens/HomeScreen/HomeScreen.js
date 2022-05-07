@@ -1,9 +1,9 @@
 import React from 'react'
-import ProductSection from '../ProductSection/ProductSection';
-import ScrollButton from '../Scroll/Scroll';
-import Navbar from "../Navbar/Navbar";
+import ProductSection from '../../components/ProductSection/ProductSection';
+import ScrollButton from '../../components/Scroll/Scroll';
+import Navbar from "../..//components/Navbar/Navbar";
 
-const Accueil = () => {
+const HomeScreen = () => {
     return (
         <div>
             <Navbar />
@@ -15,4 +15,4 @@ const Accueil = () => {
     )
 }
 
-export default Accueil
+export default HomeScreen;

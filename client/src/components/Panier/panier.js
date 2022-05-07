@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 import ScrollButton from "../Scroll/Scroll";
 import OrderDetails from '../OrderDetails/OrderDetails';
 import { createOrder } from "../../redux/Commander/orderActions";
-import axios from "axios";
+
 
 const Panier = () => {
 
@@ -19,8 +19,11 @@ const Panier = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const order = {
-            order: cart.cartItems
+            order: cart.cartItems,
+            totalqty: totalItems,
+            totalprice: totalPrice
         }
+        console.log(order);
         dispatch(createOrder(order));
         localStorage.clear();
         setValid(true)
@@ -69,7 +72,7 @@ const Panier = () => {
                     <div className="cart__summary">
                         <h4 className="summary__title"> Votre commande</h4>
                         {cartItems.map((prod) => (
-                            <div className='test'>
+                            <div className='test' key={prod._id}>
                                 <span>{prod.title} x {prod.qty} :</span>
                                 <span> {prod.qty * prod.price} € </span>
                             </div>

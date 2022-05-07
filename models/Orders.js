@@ -1,6 +1,14 @@
 const mongoose = require("mongoose");
 
 const Orders = new mongoose.Schema({
+    totalqty: {
+        type: Number,
+        required: true
+    },
+    totalprice: {
+        type: Number,
+        required: true
+    },
     order: [{
         title: {
             type: String,
@@ -27,6 +35,7 @@ const Orders = new mongoose.Schema({
             required: true
         }
     }]
+    
 })
 
 

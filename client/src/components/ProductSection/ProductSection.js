@@ -14,6 +14,7 @@ const Section = ({ type, titre }) => {
 
     const dispatch = useDispatch();
 
+    
     const getProducts = useSelector((state) => state.getProducts);
     const { products, loading, error } = getProducts;
 
