@@ -19,8 +19,11 @@ const Panier = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const order = {
-            order: cart.cartItems
+            order: cart.cartItems,
+            totalqty: totalItems,
+            totalprice: totalPrice
         }
+        console.log(order);
         dispatch(createOrder(order));
         localStorage.clear();
         setValid(true)

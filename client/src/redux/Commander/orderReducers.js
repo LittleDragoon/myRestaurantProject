@@ -8,7 +8,9 @@ export const orderReducer = (state = order_INITIAL_STATE, action) => {
         case actionTypes.CREATE_ORDER:
             return {
                 ...state,
-                order: action.payload
+                order: action.payload.order,
+                qty_total: action.payload.qty_total,
+                price_total: action.payload.price_total
             };
         case actionTypes.GET_ORDER_REQUEST:
             return {
