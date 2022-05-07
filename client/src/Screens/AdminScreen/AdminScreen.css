@@ -1,3 +1,7 @@
+.fond{
+    background: #150f0f;
+    width: 3000px;
+}
 .Titre {
     font-size: 5rem;
     font-weight: bold;
@@ -11,7 +15,6 @@
 
 
 .wrapper {
-    background: #150f0f;
     min-height: 80vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     display: flex;
@@ -21,9 +24,9 @@
 
 .cart {
     margin: 2rem auto;
-    width: 1300px;
+    width: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly
 }
 
 
@@ -34,6 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    margin-right: 3rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
     background-color: white;
@@ -52,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 1rem;
+    margin: 0rem 1rem;
    
 }
 

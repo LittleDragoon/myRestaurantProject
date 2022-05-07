@@ -20,7 +20,6 @@ const importData = async () => {
         await Product.insertMany(productData[1]);
         await Product.insertMany(productData[2]);
 
-        await Order.deleteMany({});
 
         console.log("Data Import Success");
 

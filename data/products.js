@@ -33,7 +33,7 @@ const products = [
         },
         {
 
-            title: "Crevette frites à l'ail, poivre",
+            title: "Crevette frites à l'ail",
             description: "Rien que pour toi",
             price: 10,
             image: "https://media.istockphoto.com/photos/fried-shrimp-with-garlic-pepper-picture-id1033045298?k=20&m=1033045298&s=612x612&w=0&h=YZ8m3wE7DTtR22-iVJHaCV-QG5Dga_GeKpB5v_OddEg=",
