@@ -14,6 +14,7 @@ var cors = require("cors");
 connectDB();
 const app = express();
 
+
 app.use(cors())
 const bodyParser = require('body-parser');
 
