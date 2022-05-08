@@ -35,34 +35,34 @@ const AdminScreen = () => {
   }, [dispatch]);
 
   return (
-    <div className="fond">
+    <div className="fonds">
       {loading ? (
-        <h2 className="Titre"> Currently loading... </h2>
+        <h2 className="Titres"> Currently loading... </h2>
       ) : error ? (
-        <h2 className="Titre">{error}</h2>
+        <h2 className="Titres">{error}</h2>
       ) : (
-        <div className="wrapper">
+        <div className="wrappers">
 
-          <div className="cart">
+          <div className="carts">
             {orders.map((item) =>
-              <div className="cart__summary">
-                <h4 className="summary__title">Commandes</h4>
+              <div className="cart__summarys">
+                <h4 className="summary__titles">Commandes</h4>
+                <div className="directions">
+                  {item.order.map((prod) => (
+                    <div className="tests" key={item._id}>
+                      <span>{prod.title} x {prod.qty} :</span>
+                      <span> {prod.qty * prod.price} € </span>
+                    </div>))}
 
-                {item.order.map((prod) => (
-                  <div className="test" key={item._id}>
-                    <span>{prod.title} x {prod.qty} :</span>
-                    <span> {prod.qty * prod.price} € </span>
-                  </div>))}
-
-
-                <div className="barre">
-                  __________________________________________
                 </div>
-                <div className="summary__price">
+                <div className="barres">
+                  _____________________________________________
+                </div>
+                <div className="summary__prices">
                   <span>TOTAL: {item.totalqty}  produits</span>
                   <span>{item.totalprice}€</span>
                 </div>
-                <button className="summary__checkoutBtn" onClick={() => { }}>
+                <button className="summary__checkoutBtns" onClick={() => { }}>
                   Supprimer la commande
                 </button>
               </div>

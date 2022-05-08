@@ -1,8 +1,8 @@
-.fond{
+.fonds{
     background: #150f0f;
-    width: 3000px;
+    width: 1000rem;
 }
-.Titre {
+.Titres {
     font-size: 5rem;
     font-weight: bold;
     color: black;
@@ -14,7 +14,7 @@
 }
 
 
-.wrapper {
+.wrappers {
     min-height: 80vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     display: flex;
@@ -22,20 +22,17 @@
 
 }
 
-.cart {
-    margin: 2rem auto;
+.carts {
     width: auto;
     display: flex;
-    justify-content:space-evenly
 }
 
 
-.cart__summary {
+.cart__summarys {
     height: 100%;
-    flex: 0.3;
+    width:400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 1rem;
     margin-right: 3rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -44,7 +41,7 @@
 
 }
 
-.summary__title {
+.summary__titles {
     font-size: 1.8rem;
     font-weight: bold;
     padding: 0rem 6.5rem 2rem;
@@ -52,15 +49,28 @@
 
 }
 
-.test {
+.barres{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+.directions{
+    display: flex;
+    flex-direction: column;
+    flex: 0.8;
+}
+
+
+.tests {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0rem 1rem;
-   
+    padding: 0.45rem 0rem;
 }
 
-.test span:nth-child(1) {
+.tests span:nth-child(1) {
     font-size: 1.3rem;
     flex: 0.8;
     font-family: "Copperplate";
@@ -69,7 +79,7 @@
 
 }
 
-.test span:nth-child(2) {
+.tests span:nth-child(2) {
     flex: 0.2;
     font-size: 1.5rem;
     font-weight: bold;
@@ -80,19 +90,20 @@
 
 }
 
-.summary__price {
+.summary__prices {
     display: flex;
     align-items: center;
     margin: 1rem;
+    flex:0.2;
 }
 
 
-.summary__price span:nth-child(1) {
+.summary__prices span:nth-child(1) {
     font-size: 1.3rem;
     flex: 0.8;
 }
 
-.summary__price span:nth-child(2) {
+.summary__prices span:nth-child(2) {
     flex: 0.2;
     font-size: 1.5rem;
     font-weight: bold;
@@ -100,7 +111,7 @@
 
 }
 
-.summary__checkoutBtn {
+.summary__checkoutBtns {
     padding: 10px 17px;
     border: 1px solid var(--secondary-color);
     border-radius: 10px;

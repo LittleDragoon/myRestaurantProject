@@ -43,6 +43,7 @@
     align-items: center;
     justify-content: center;
     margin: 0.5rem 1rem;
+    
 
 }
 
@@ -50,6 +51,7 @@
     font-size: 1.3rem;
     flex: 0.8;
     font-family: "Copperplate";
+    
 
 }
 
@@ -83,7 +85,7 @@
     flex: 0.2;
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
+    text-align: end;
 
 }
 
