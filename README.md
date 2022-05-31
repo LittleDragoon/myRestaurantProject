@@ -10,7 +10,7 @@ Vous pouvez visionner le site sur l'URL : [https://mines-restaurant.netlify.app/
 
 Pour le client, il y a le chemin ./ et le chemin ./panier
 
-Pour le restaurateur, on visualise les commandes sur le chemin [https://mines-restaurant.netlify.app/order](https://mines-restaurant.netlify.app/order)
+Pour le restaurateur, on visualise les commandes sur le chemin [https://mines-restaurant.netlify.app/admin](https://mines-restaurant.netlify.app/admin)
 
 ### Back-end
 
