@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getOrder as listOrders } from "../../redux/Commander/orderActions";
 
+import axios from "axios";
+
 const AdminScreen = () => {
   const dispatch = useDispatch();
 
@@ -62,7 +64,7 @@ const AdminScreen = () => {
                   <span>TOTAL: {item.totalqty}  produits</span>
                   <span>{item.totalprice}€</span>
                 </div>
-                <button className="summary__checkoutBtns" onClick={() => { }}>
+                <button className="summary__checkoutBtns" onClick={() => { axios.delete(`https://my-restaurant-proj.herokuapp.com/order/${item._id}`) }}>
                   Supprimer la commande
                 </button>
               </div>
