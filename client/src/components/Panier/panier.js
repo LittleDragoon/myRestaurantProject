@@ -85,6 +85,7 @@ const Panier = () => {
                             <span>TOTAL: ({totalItems} produits)</span>
                             <span>{totalPrice} €</span>
                         </div>
+
                         <button className="summary__checkoutBtn" onClick={handleSubmit}>
                             Valider la commande
                         </button>
