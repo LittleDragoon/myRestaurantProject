@@ -1,2 +1,19 @@
-# myRestaurantProject
- 
+# FoodTech
+
+## `Introduction`
+
+**_Foodtech_** est un logiciel de commande centralisé à destination des restaurateurs afin de simplifier et de faciliter la prise des commandes.
+
+### Front-End
+
+Vous pouvez visionner le site sur l'URL : [https://mines-restaurant.netlify.app/](https://mines-restaurant.netlify.app/)
+
+Pour le client, il y a le chemin ./ et le chemin ./panier
+
+Pour le restaurateur, on visualise les commandes sur le chemin [https://mines-restaurant.netlify.app/order](https://mines-restaurant.netlify.app/order)
+
+### Back-end
+
+La base de données MongoDB est connectée sur Heroku, sur le lien suivant : [https://my-restaurant-proj.herokuapp.com/](https://my-restaurant-proj.herokuapp.com/)
+
+Il y a le chemin [https://my-restaurant-proj.herokuapp.com/order](https://my-restaurant-proj.herokuapp.com/order) pour voir toutes les commandes.
