@@ -14,6 +14,6 @@ Pour le restaurateur, on visualise les commandes sur le chemin [https://mines-re
 
 ### Back-end
 
-La base de données MongoDB est connectée sur Heroku, sur le lien suivant : [https://benzhu-restaurant-project.onrender.com/](https://benzhu-restaurant-project.onrender.com/)
+La base de données MongoDB est connectée sur Render, sur le lien suivant : [https://benzhu-restaurant-project.onrender.com/](https://benzhu-restaurant-project.onrender.com/)
 
 Il y a le chemin [https://benzhu-restaurant-project.onrender.com/order](https://benzhu-restaurant-project.onrender.com/order) pour voir toutes les commandes.

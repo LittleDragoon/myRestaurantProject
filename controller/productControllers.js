@@ -26,9 +26,6 @@ const getProductById = async (req, res) => {
 const createOrder = async (req, res) => {
   const order = req.body;
   const newOrder = new Orders(order);
-  console.log(newOrder);
-  console.log(req.body);
-
   try {
     await newOrder.save();
     res.status(201).json(newOrder);
