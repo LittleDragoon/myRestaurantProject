@@ -9,11 +9,10 @@ import { getOrder as listOrders } from "../../redux/Commander/orderActions";
 import axios from "axios";
 
 const AdminScreen = () => {
-
   const Delete = (id) => {
-    axios.delete(`https://my-restaurant-proj.herokuapp.com/order/${id}`);
+    axios.delete(`http://127.0.0.1:5001/order/${id}`);
     window.location.reload();
-  }
+  };
   const dispatch = useDispatch();
 
   const getOrders = useSelector((state) => state.order);
@@ -49,31 +48,37 @@ const AdminScreen = () => {
         <h2 className="Titres">{error}</h2>
       ) : (
         <div className="wrappers">
-
           <div className="carts">
-            {orders.map((item) =>
+            {orders.map((item) => (
               <div className="cart__summarys">
                 <h4 className="summary__titles">Commandes</h4>
                 <div className="directions">
                   {item.order.map((prod) => (
                     <div className="tests" key={item._id}>
-                      <span>{prod.title} x {prod.qty} :</span>
+                      <span>
+                        {prod.title} x {prod.qty} :
+                      </span>
                       <span> {prod.qty * prod.price} € </span>
-                    </div>))}
-
+                    </div>
+                  ))}
                 </div>
                 <div className="barres">
                   _____________________________________________
                 </div>
                 <div className="summary__prices">
-                  <span>TOTAL: {item.totalqty}  produits</span>
+                  <span>TOTAL: {item.totalqty} produits</span>
                   <span>{item.totalprice}€</span>
                 </div>
-                <button className="summary__checkoutBtns" onClick={() => { Delete(item._id) }}>
+                <button
+                  className="summary__checkoutBtns"
+                  onClick={() => {
+                    Delete(item._id);
+                  }}
+                >
                   Supprimer la commande
                 </button>
               </div>
-            )}
+            ))}
           </div>
         </div>
       )}
