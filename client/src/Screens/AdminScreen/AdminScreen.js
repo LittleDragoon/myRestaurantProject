@@ -10,7 +10,7 @@ import axios from "axios";
 
 const AdminScreen = () => {
   const Delete = (id) => {
-    axios.delete(`http://127.0.0.1:5001/order/${id}`);
+    axios.delete(`https://benzhu-restaurant-project.onrender.com/order/${id}`);
     window.location.reload();
   };
   const dispatch = useDispatch();

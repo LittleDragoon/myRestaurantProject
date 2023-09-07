@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://127.0.0.1:5001/",
+  "proxy": "https://benzhu-restaurant-project.onrender.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

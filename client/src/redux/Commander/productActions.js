@@ -6,7 +6,9 @@ export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
 
-    const { data } = await axios.get("http://127.0.0.1:5001/api/products");
+    const { data } = await axios.get(
+      "https://benzhu-restaurant-project.onrender.com/api/products"
+    );
 
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,

@@ -7,7 +7,9 @@ import * as actionTypes from "./types";
 import axios from "axios";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`http://127.0.0.1:5001/api/products/${id}`);
+  const { data } = await axios.get(
+    `https://benzhu-restaurant-project.onrender.com/api/products/${id}`
+  );
 
   dispatch({
     type: actionTypes.ADD_TO_CART,

@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const createOrder = (order) => (dispatch) => {
   axios
-    .post("http://127.0.0.1:5001/order", order)
+    .post("https://benzhu-restaurant-project.onrender.com/order", order)
     .then((response) => {
       console.log(order);
       console.log(response);
@@ -23,7 +23,9 @@ export const getOrder = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_ORDER_REQUEST });
 
-    const { data } = await axios.get("http://127.0.0.1:5001/order");
+    const { data } = await axios.get(
+      "https://benzhu-restaurant-project.onrender.com/order"
+    );
     console.log(data);
 
     dispatch({
