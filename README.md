@@ -7,6 +7,7 @@ FoodTech is a centralized ordering software designed for restaurant owners to si
 ### Front-End
 
 You can view the website at the following URL: [https://mines-restaurant.netlify.app/](https://mines-restaurant.netlify.app/)
+(It may take some time, a minute or two, for everything to load at the first time because Render server is off after 15 min of inactivity)
 
 For the customer, there are two paths: 
 
