@@ -9,8 +9,10 @@ import { getOrder as listOrders } from "../../redux/Commander/orderActions";
 import axios from "axios";
 
 const AdminScreen = () => {
-  const Delete = (id) => {
-    axios.delete(`https://benzhu-restaurant-project.onrender.com/order/${id}`);
+  const Delete = async (id) => {
+    await axios.delete(
+      `https://benzhu-restaurant-project.onrender.com/order/${id}`
+    );
     window.location.reload();
   };
   const dispatch = useDispatch();
@@ -49,8 +51,8 @@ const AdminScreen = () => {
       ) : (
         <div className="wrappers">
           <div className="carts">
-            {orders.map((item) => (
-              <div className="cart__summarys">
+            {orders.map((item, index) => (
+              <div className="cart__summarys" key={index}>
                 <h4 className="summary__titles">Commandes</h4>
                 <div className="directions">
                   {item.order.map((prod) => (

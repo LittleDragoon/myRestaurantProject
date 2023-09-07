@@ -6,9 +6,6 @@ export const createOrder = (order) => (dispatch) => {
   axios
     .post("https://benzhu-restaurant-project.onrender.com/order", order)
     .then((response) => {
-      console.log(order);
-      console.log(response);
-      console.log(response.data);
       dispatch({
         type: actionTypes.CREATE_ORDER,
         payload: response.data,
